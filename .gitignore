@@ -1,0 +1,31 @@
+# Temporary files and caches
+*.tmp
+*.cache
+.DS_Store
+
+# Local testing artifacts
+test-output/
+debug/
+
+# Never commit files with these patterns (likely contain secrets)
+*secret*.ts
+*secret*.js
+*apikey*.ts
+*apikey*.js
+*credentials*.ts
+*credentials*.js
+
+# Node modules if any wrappers need dependencies
+node_modules/
+
+# Compiled JavaScript if TypeScript is transpiled
+*.js
+*.js.map
+!skills/*.js
+!wrappers/*.js
+
+# Keep these files in git (they're safe):
+# - wrappers/*.ts (tool interfaces, no secrets)
+# - skills/*.ts (generated reusable code)
+# - registry.json (metadata only)
+# - README.md (documentation)

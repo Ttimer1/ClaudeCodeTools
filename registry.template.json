@@ -1,0 +1,62 @@
+{
+  "version": "1.0.0",
+  "description": "Shared claude-code-tools registry - universal wrappers and skills",
+  "tools": [
+    {
+      "name": "brave-search",
+      "category": "search",
+      "description": "Web and image search using Brave Search API",
+      "file": "wrappers/brave-search-wrapper.ts",
+      "exports": {
+        "class": "BraveSearchWrapper",
+        "functions": ["searchWeb"]
+      },
+      "requiresEnv": ["BRAVE_API_KEY"]
+    },
+    {
+      "name": "firecrawl",
+      "category": "scraping",
+      "description": "Web scraping and crawling - converts pages to markdown",
+      "file": "wrappers/firecrawl-wrapper.ts",
+      "exports": {
+        "class": "FirecrawlWrapper",
+        "functions": ["scrapePage"]
+      },
+      "requiresEnv": ["FIRECRAWL_API_KEY"]
+    },
+    {
+      "name": "sequential-thinking",
+      "category": "reasoning",
+      "description": "Structured thinking and planning for complex problems",
+      "file": "wrappers/sequential-thinking-wrapper.ts",
+      "exports": {
+        "class": "SequentialThinkingWrapper",
+        "functions": ["createThinkingPlan"]
+      },
+      "requiresEnv": []
+    }
+  ],
+  "skills": [
+    {
+      "name": "batch-search",
+      "category": "research",
+      "description": "Execute multiple web searches efficiently with rate limiting",
+      "file": "skills/batch-search.ts",
+      "exports": {
+        "functions": [
+          "batchSearch",
+          "formatSearchResults",
+          "exportResultsAsJson",
+          "extractUrls",
+          "filterByDomain",
+          "searchTestingPatterns"
+        ]
+      },
+      "tokenSavings": {
+        "firstUse": "~2000 tokens",
+        "subsequentUse": "~200 tokens",
+        "reduction": "90%"
+      }
+    }
+  ]
+}
