@@ -13,7 +13,7 @@ Universal tools and skills for the code execution pattern.
 Add as git submodule to your projects:
 
 ```bash
-git submodule add https://github.com/YOUR-USERNAME/claude-code-tools.git .claude/tools/shared
+git submodule add https://github.com/Ttimer1/ClaudeCodeTools.git .claude/tools/shared
 ```
 
 See main README.md for complete documentation.
