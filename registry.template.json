@@ -122,6 +122,17 @@
         "functions": ["storeMemory", "recallMemory", "searchMemory"]
       },
       "requiresEnv": []
+    },
+    {
+      "name": "playwright",
+      "category": "browser-automation",
+      "description": "Browser automation - navigate, screenshot, interact with web pages",
+      "file": "wrappers/playwright-wrapper.ts",
+      "exports": {
+        "class": "PlaywrightWrapper",
+        "functions": ["navigateToUrl", "takeScreenshot", "clickElement", "fillField"]
+      },
+      "requiresEnv": []
     }
   ],
   "skills": [
