@@ -34,6 +34,94 @@
         "functions": ["createThinkingPlan"]
       },
       "requiresEnv": []
+    },
+    {
+      "name": "notion",
+      "category": "productivity",
+      "description": "Notion workspace integration - search pages, query databases, create content",
+      "file": "wrappers/notion-wrapper.ts",
+      "exports": {
+        "class": "NotionWrapper",
+        "functions": ["searchNotion", "getNotionPage"]
+      },
+      "requiresEnv": ["NOTION_API_TOKEN"]
+    },
+    {
+      "name": "filesystem",
+      "category": "file-operations",
+      "description": "Secure file system access with path restrictions",
+      "file": "wrappers/filesystem-wrapper.ts",
+      "exports": {
+        "class": "FilesystemWrapper",
+        "functions": ["listFiles", "readFileContents", "writeFileContents"]
+      },
+      "requiresEnv": []
+    },
+    {
+      "name": "pinecone",
+      "category": "vector-database",
+      "description": "Pinecone vector database for similarity search and embeddings",
+      "file": "wrappers/pinecone-wrapper.ts",
+      "exports": {
+        "class": "PineconeWrapper",
+        "functions": ["queryVectors"]
+      },
+      "requiresEnv": ["PINECONE_API_KEY", "PINECONE_ASSISTANT_HOST"]
+    },
+    {
+      "name": "serp",
+      "category": "search",
+      "description": "SerpAPI for Google search, images, news, and suggestions",
+      "file": "wrappers/serp-wrapper.ts",
+      "exports": {
+        "class": "SerpWrapper",
+        "functions": ["searchGoogle", "searchImages", "searchNews"]
+      },
+      "requiresEnv": ["SERPAPI_API_KEY"]
+    },
+    {
+      "name": "n8n-workflows",
+      "category": "automation",
+      "description": "N8N workflows via remote MCP integration",
+      "file": "wrappers/n8n-workflows-wrapper.ts",
+      "exports": {
+        "class": "N8NWorkflowsWrapper",
+        "functions": ["createN8NConnection"]
+      },
+      "requiresEnv": []
+    },
+    {
+      "name": "context7",
+      "category": "context-management",
+      "description": "Upstash Context7 for context management via remote MCP",
+      "file": "wrappers/context7-wrapper.ts",
+      "exports": {
+        "class": "Context7Wrapper",
+        "functions": ["createContext7Connection"]
+      },
+      "requiresEnv": []
+    },
+    {
+      "name": "n8n-mcp",
+      "category": "automation",
+      "description": "N8N automation platform API integration",
+      "file": "wrappers/n8n-mcp-wrapper.ts",
+      "exports": {
+        "class": "N8NMCPWrapper",
+        "functions": ["listN8NWorkflows", "executeN8NWorkflow"]
+      },
+      "requiresEnv": ["N8N_API_URL", "N8N_API_KEY"]
+    },
+    {
+      "name": "openmemory",
+      "category": "memory",
+      "description": "Local memory server for persistent context and data storage",
+      "file": "wrappers/openmemory-wrapper.ts",
+      "exports": {
+        "class": "OpenMemoryWrapper",
+        "functions": ["storeMemory", "recallMemory", "searchMemory"]
+      },
+      "requiresEnv": []
     }
   ],
   "skills": [
